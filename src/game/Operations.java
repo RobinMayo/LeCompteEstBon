@@ -1,3 +1,5 @@
+package game;
+import exception.InvalidOperation;
 
 public enum Operations {
 	Plus,

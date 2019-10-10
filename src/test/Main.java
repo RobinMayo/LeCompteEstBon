@@ -1,3 +1,7 @@
+package test;
+
+import exception.InvalidOperation;
+import game.Operations;
 
 public class Main {
 	private static final int NUMBER_TO_FIND_MAX_VALUE = 1000;
