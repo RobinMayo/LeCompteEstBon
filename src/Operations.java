@@ -31,22 +31,28 @@ public enum Operations {
 		return str.toString();
 	}
 	
-	public static int operate(int leftOperand, int rightOperand, Operations operand)
-			throws InvalidOperation {
+	public static double operate(double leftOperand, double rightOperand, Operations operand,
+			StringBuilder str) throws InvalidOperation {
 		if (rightOperand == 0) {
 			return leftOperand;
 		} else if (leftOperand == 0) {
 			return rightOperand;
 		}
+		str.append(" ");
+		
 		switch(operand) {
 			case Plus:
+				str.append("+ ");
 				return leftOperand + rightOperand;
 			case Minus:
+				str.append("- ");
 				return leftOperand - rightOperand;
 			case Multi:
+				str.append("* ");
 				return leftOperand * rightOperand;
 			case Divid:
-				return (int) leftOperand / rightOperand;
+				str.append("/ ");
+				return leftOperand / rightOperand;
 			default:
 				throw new InvalidOperation("Unknown operation : " + operand);
 		}
